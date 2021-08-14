@@ -1,0 +1,8 @@
+{
+    "yuqueConfig": {
+        "baseUrl": "https://wisper.yuque.com/api/v2",
+        "user": "xxbin-qusi1",
+        "auth_token": "vCUhFePqSDp2ikyrhnY9llrKru6BAaD3DyE9Exua"
+    },
+    "postBaseDIr": "/root/document/github/webhook/post"
+}

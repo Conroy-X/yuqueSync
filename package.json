@@ -1,0 +1,33 @@
+{
+  "name": "webhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " nodemon --inspect index.js",
+    "pkg": "pkg --options max_old_space_size=8192 -t node16-linux-x64 -o ./webhook_quyue ./index.js"
+  },
+  "pkg": {
+    "scripts": [
+      "index.js"
+    ],
+    "assets": [
+      "node_modules/**/*.txt"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@umijs/fabric": "^2.6.2",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12",
+    "pkg": "^5.3.0"
+  },
+  "dependencies": {
+    "got": "^9.6.0",
+    "log4js": "^6.3.0",
+    "moment": "^2.29.1",
+    "prettier": "^2.3.2"
+  }
+}

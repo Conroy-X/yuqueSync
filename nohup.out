@@ -1,0 +1,33 @@
+
+> webhook@1.0.0 dev /root/document/github/webhook
+>  nodemon --inspect index.js
+
+[33m[nodemon] 2.0.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,json,ini[39m
+[32m[nodemon] starting `node --inspect index.js`[39m
+Debugger listening on ws://127.0.0.1:9229/c60b0ca6-5a08-449a-8b04-c10b4cc1787c
+For help, see: https://nodejs.org/en/docs/inspector
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at internal/fs/streams.js:202:14
+    at FSReqCallback.wrapper [as oncomplete] (fs.js:539:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! webhook@1.0.0 dev: ` nodemon --inspect index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the webhook@1.0.0 dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2021-08-11T16_52_39_924Z-debug.log
