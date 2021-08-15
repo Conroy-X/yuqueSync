@@ -7,7 +7,7 @@ menu:
   home: /
   archives: /archives
   tags: /tags
-  #categories: /categories
+  categories: /categories
   search: /search
   about: https://wisper.top
   rss: /atom.xml
