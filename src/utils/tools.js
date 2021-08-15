@@ -37,7 +37,8 @@ function loadYuqueBody(str = {}) {
     date: moment(str.published_at).format("YYYYMMDD_HHmmss"),
     author: 'rik',
     email: "21445738@qq.com",
-    description:""
+    description:"",
+    excerpt:''
   };
   const head = body.slice(0, body.indexOf('\n---') + 4);
   const content =  body.slice(body.indexOf('\n---') + 4).trim();
@@ -47,8 +48,11 @@ function loadYuqueBody(str = {}) {
     .map(line => {
       const key = line.slice(0, line.indexOf(':'));
       const value = line.slice(key.length + 1).trim();
-      if(value ) { 
+      if( value ) { 
         meta[key] = value
+      }
+      if(!meta.excerpt) {
+        meta.excerpt = meta.description
       }
       return true;
     });

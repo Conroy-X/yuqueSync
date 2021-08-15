@@ -1,5 +1,4 @@
 const fs = require('fs');
-const moment = require('moment')
 
 const { request, loadYuqueBody } = require('../utils/tools');
 
@@ -42,7 +41,6 @@ async function syncWriteFile(rawData, repoName) {
     }
 
     const filename = `${rawData.title}.md`
-    console.log(postDetial[rawData.id])
     postDetial[rawData.id].filePath = `${basePath}/${filename}`
     fs.writeFileSync(`${postBaseDIr}${basePath}/${filename}`, content)
 

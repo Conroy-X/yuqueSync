@@ -1,0 +1,25 @@
+<% var last; %>
+
+<% site.posts.sort('date', -1).each(function(post, i){ %>
+  <% if(!post.categories.data.some(item => theme.exclude.categories.includes(item.name)) ) { %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+      <section class="post page archives">
+        <h3 class="archive-year-wrap">
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year">
+            <%= year %>
+          </a>
+        </h3>
+        <div class="archives">
+    <% } %>
+      <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% } %>
+
+<% }) %>
+<% if (site.posts.length){ %>
+  </div></section>
+<% } %>

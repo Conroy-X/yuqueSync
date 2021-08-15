@@ -34,7 +34,7 @@ async function yuqueInit() {
     // 删除了的
     
      postDel.push(...Object.keys(postDetial).filter( s => !postIDList.includes(Number(s))))
-     _logger.info(`postDel:${conf.json}\npostAdd:${postAdd}\npostUpdate:${postUpdate}`)
+     _logger.info(`postDel:${postDel}\npostAdd:${postAdd}\npostUpdate:${postUpdate}`)
      global.config.postDetial = postMapDetial
 
      for(const id of postDel) {

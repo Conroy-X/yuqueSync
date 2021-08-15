@@ -1,3 +1,5 @@
 node_modules/*
 logger/*
 post/*
+conf/conf.json
+conf/postDetial.json
